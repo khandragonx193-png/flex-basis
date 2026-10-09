@@ -1,0 +1,152 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+header {
+    background-color: #1d4ed8;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+main {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 0 16px;
+}
+
+.lesson {
+    background-color: white;
+    padding: 22px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000012;
+}
+
+.lesson h2 {
+    color: #1d4ed8;
+    margin-top: 0;
+}
+
+.lesson p {
+    line-height: 1.6;
+}
+
+/* Vi du 1: Don vi px */
+.container {
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    background-color: #e2e8f0;
+    border-radius: 8px;
+}
+
+.item {
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.example-px .item-200 {
+    flex-basis: 200px;
+    background-color: #93c5fd;
+}
+
+.example-px .item-100 {
+    flex-basis: 100px;
+    background-color: #bfdbfe;
+}
+
+.example-px .item-150 {
+    flex-basis: 150px;
+    background-color: #60a5fa;
+}
+
+/* Vi du 2: Chuyen truc chinh thanh chieu doc */
+.example-column {
+    flex-direction: column;
+    height: 450px;
+    align-items: flex-start;
+}
+
+.green {
+    flex-basis: 100px;
+    flex-shrink: 0;
+    width: 220px;
+    background-color: #86efac;
+}
+
+/* Vi du 3: Don vi phan tram */
+.example-percent .item {
+    flex-basis: 50%;
+    min-width: 0;
+    background-color: #fca5a5;
+}
+
+/* Vi du 4: Ket hop flex-basis va flex-grow */
+.example-grow {
+    width: 100%;
+}
+
+.blue {
+    flex-basis: 100px;
+    background-color: #93c5fd;
+}
+
+.grow-1 {
+    flex-grow: 1;
+}
+
+.grow-2 {
+    flex-grow: 2;
+}
+
+/* Vi du 5: Gia tri auto */
+.auto-item {
+    flex-basis: auto;
+    background-color: #c4b5fd;
+}
+
+.example-auto .auto-item:first-child {
+    width: 180px;
+}
+
+.example-auto .auto-item:last-child {
+    width: 120px;
+}
+
+footer {
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    padding: 18px;
+}
+
+@media (max-width: 600px) {
+    .example-px,
+    .example-percent,
+    .example-grow {
+        overflow-x: auto;
+    }
+
+    .lesson {
+        padding: 15px;
+    }
+}
